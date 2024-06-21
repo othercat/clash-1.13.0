@@ -2,9 +2,7 @@ NAME=clash
 BINDIR=bin
 VERSION=$(shell git describe --tags || echo "unknown version")
 BUILDTIME=$(shell date -u)
-GOBUILD=CGO_ENABLED=0 go build -trimpath -ldflags '-X "github.com/othercat/clash-1.13.0/constant.Version=$(VERSION)" \
-		-X "github.com/othercat/clash-1.13.0/constant.BuildTime=$(BUILDTIME)" \
-		-w -s -buildid='
+GOBUILD=CGO_ENABLED=0 go build -trimpath -ldflags '-X "-w -s -buildid='
 
 PLATFORM_LIST = \
 	darwin-amd64 \
