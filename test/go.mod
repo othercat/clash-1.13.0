@@ -1,6 +1,6 @@
 module clash-test
 
-go 1.19
+go 1.19.5
 
 require (
 	github.com/Dreamacro/clash v1.12.0
